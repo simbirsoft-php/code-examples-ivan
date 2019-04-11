@@ -39,9 +39,15 @@ docker-compose exec php-cli php artisan db:seed
 docker-compose exec php-cli ./vendor/bin/phpunit --coverage-html ./public/coverage/
 ```
 
+## Swagger
+
+Документация к API (формируется автоматически из комменатриев phpdocs) Swagger доступна по ссылке: http://localhost:8080/api/documentation 
+
+Чтобы отправить запрос на API нужно пройти авторизацию.
+
 ## Авторизация
 
-Для добавления в бзу данных тестовых аккаунтов, необходимо использовать команду:
+Для добавления в базу данных тестовых аккаунтов, необходимо использовать команду: `docker-compose exec php-cli php artisan db:seed`
 
 После этого в бд будут созданы пользователи, под которыми можно будет авторизоваться и отправлять запросы через Swagger:
 
